@@ -10,6 +10,7 @@
 
 
 This application is a simple spring boot angular8 CRUD examples.
+This project was generated with Angular CLI version 8.2.2
 
 ## Running the spring-boot-angular8 application
 ```

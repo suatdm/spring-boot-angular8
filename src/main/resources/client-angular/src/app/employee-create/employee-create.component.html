@@ -1,0 +1,47 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+
+        <div class="form-group row">
+          <div class="col-sm-2">
+            <label for="name">Name</label>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" [(ngModel)]="employee.name" class="form-control" id="name" name="name" placeholder="Enter your name"
+                 required #name="ngModel">
+          </div>
+          <div class="col-sm-4">
+            <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+          </div>
+        </div>
+
+      <div class="form-group row">
+        <div class="col-sm-2">
+          <label for="name">Department</label>
+        </div>
+        <div class="col-sm-6">
+          <input type="text" [(ngModel)]="employee.department" class="form-control" id="department" name="department" placeholder="Enter your department"
+                 required #department="ngModel">
+        </div>
+        <div class="col-sm-4">
+          <div [hidden]="!department.pristine" class="alert alert-danger">Department is required</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-2">
+          <label for="name">Phone</label>
+        </div>
+        <div class="col-sm-6">
+          <input type="number" [(ngModel)]="employee.phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone number"
+                 required #phone="ngModel" maxlength="11">
+        </div>
+        <div class="col-sm-4">
+          <div [hidden]="!phone.pristine" class="alert alert-danger">Phone is required</div>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="!employeeForm.form.valid" class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

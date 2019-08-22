@@ -1,0 +1,52 @@
+<div mat-dialog-content>
+  <p>Are you sure want to delete?</p>
+  <div class="form-group row">
+    <div class="col-sm-4">
+      <label for="name">Name</label>
+    </div>
+    <div class="col-sm-8">
+      <input type="text" [(ngModel)]="employee.name" class="form-control" id="name" name="name" disabled>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-4">
+      <label for="department">Department</label>
+    </div>
+    <div class="col-sm-8">
+      <input type="text" [(ngModel)]="employee.department" class="form-control" id="department" name="department" disabled>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-4">
+      <label for="phone">Phone Number</label>
+    </div>
+    <div class="col-sm-8">
+      <input type="text" [(ngModel)]="employee.phone" class="form-control" id="phone" name="phone" disabled>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-4">
+      <label for="working">Is Working</label>
+    </div>
+    <div class="col-sm-8">
+      <input type="text" [(ngModel)]="employee.working" class="form-control" id="working" name="working" disabled>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-4">
+      <label for="createdDate">Created Date</label>
+    </div>
+    <div class="col-sm-8">
+      <input type="text" [(ngModel)]="employee.createdDate" class="form-control" id="createdDate" name="createdDate" disabled>
+    </div>
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" class="mat-raised-button mat-warn" (click)="onDeleteClick(employee.rid)">Yes</button>
+  <button mat-button cdkFocusInitial (click)="onNoClick()">No</button>
+</div>

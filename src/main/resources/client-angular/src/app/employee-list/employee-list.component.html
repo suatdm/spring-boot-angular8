@@ -1,0 +1,30 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Is working</th>
+        <th scope="col">Created Date</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.department }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>{{ employee.working }}</td>
+        <td>{{ employee.createdDate }}</td>
+        <td>
+          <button mat-raised-button (click)="employeeDelete(employee)" class="btn btn-danger">Delete</button>
+          <button (click)="employeeDetails(employee)" class="btn btn-primary" style="margin-left: 10px">Details</button>
+          <button (click)="employeeUpdate(employee)" class="btn btn-info" style="margin-left: 10px">Update</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

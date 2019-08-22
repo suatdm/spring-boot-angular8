@@ -1,0 +1,8 @@
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+server:
+  port: 8090
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:angular8@ds034198.mlab.com:34198/spring-boot-angular8
